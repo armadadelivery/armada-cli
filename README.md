@@ -2,8 +2,37 @@
 
 `armada` — command-line client for the Armada Automated Ordering API v2.
 
+## Install
+
+From npm (once published):
+
 ```bash
 npm i -g @armada/cli
+```
+
+Directly from GitHub — no registry needed:
+
+```bash
+# latest main
+npm i -g github:armadadelivery/armada-cli
+
+# pinned
+npm i -g github:armadadelivery/armada-cli#v0.1.0-beta.0
+```
+
+Or run it ad-hoc with `npx` without installing:
+
+```bash
+npx github:armadadelivery/armada-cli wallet
+```
+
+Both git and npx paths work because the CLI has a `prepare` script that
+compiles TypeScript on install. The `@armada/sdk` dependency is pulled
+from GitHub transitively, so you don't need npm access to anything.
+
+## Usage
+
+```bash
 armada config set          # prompts for apiKey + apiSecret
 armada wallet              # GET /v2/wallet
 armada invoices list
