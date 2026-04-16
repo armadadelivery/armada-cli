@@ -1,0 +1,48 @@
+{
+  "name": "@armada/cli",
+  "version": "0.1.0-beta.0",
+  "description": "Command-line client for the Armada Automated Ordering API v2.",
+  "type": "module",
+  "bin": {
+    "armada": "dist/bin.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@armada/sdk": "github:armadadelivery/armada-node#7e1a4f09f66ba799e00a4028a90abd3f9a4e048a",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "@types/node": "^20.11.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/armadadelivery/armada-cli.git"
+  },
+  "homepage": "https://github.com/armadadelivery/armada-cli#readme",
+  "bugs": {
+    "url": "https://github.com/armadadelivery/armada-cli/issues"
+  },
+  "keywords": [
+    "armada",
+    "armada-delivery",
+    "cli",
+    "automated-ordering"
+  ],
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  }
+}
