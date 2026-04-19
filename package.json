@@ -1,6 +1,6 @@
 {
   "name": "@armada/cli",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-beta.1",
   "description": "Command-line client for the Armada Automated Ordering API v2.",
   "type": "module",
   "bin": {
@@ -18,7 +18,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@armada/sdk": "github:armadadelivery/armada-node#7e1a4f09f66ba799e00a4028a90abd3f9a4e048a",
+    "@armada/sdk": "github:armadadelivery/armada-node#82a2215ea663057b6eb4294758b46aa8c9a48a36",
     "commander": "^12.1.0"
   },
   "devDependencies": {

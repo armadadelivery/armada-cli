@@ -44,9 +44,11 @@ armada deliveries retry 66a...
 
 Stored at `~/.armada/config.json` (mode 600) after `armada config set`. Env vars `ARMADA_API_KEY`, `ARMADA_API_SECRET`, `ARMADA_API_BASE` take precedence.
 
-## Sandbox
+## Production, Test mode, and the optional sandbox
 
-Default base URL is `https://sandbox.api.armadadelivery.com`. Override with `--api-base https://api.armadadelivery.com` or set `ARMADA_API_BASE`.
+Default base URL is **production** — `https://api.armadadelivery.com`. Create a v2 API key with **Test mode ON** in the [business app](https://business.armadadelivery.com) to simulate deliveries end-to-end (bot driver, ~30 s lifecycle, no real dispatch, no wallet charge). Toggle Test mode off on the same key when you're ready to go live.
+
+Override to the isolated sandbox environment with `--api-base https://sandbox.api.armadadelivery.com` or set `ARMADA_API_BASE`. For most integrations you do not need to.
 
 ## JSON output
 

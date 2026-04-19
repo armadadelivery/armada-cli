@@ -14,8 +14,8 @@ program
   .name('armada')
   .description('CLI for the Armada Automated Ordering API v2')
   .option('--json', 'Emit raw JSON (machine-readable)')
-  .option('--api-base <url>', 'Override API base URL (sandbox by default)')
-  .version('0.1.0-beta.0');
+  .option('--api-base <url>', 'Override API base URL (production by default)')
+  .version('0.1.0-beta.1');
 
 // ---------- config ----------
 const config = program.command('config').description('Manage stored credentials');
@@ -25,7 +25,7 @@ config.command('show').description('Print the current config location + state').
   console.log(`config: ${getConfigPath()}`);
   console.log(`apiKey: ${cfg.apiKey ? '✓ set' : '✗ not set'}`);
   console.log(`apiSecret: ${cfg.apiSecret ? '✓ set' : '✗ not set'}`);
-  console.log(`baseUrl: ${cfg.baseUrl || '(default: https://sandbox.api.armadadelivery.com)'}`);
+  console.log(`baseUrl: ${cfg.baseUrl || '(default: https://api.armadadelivery.com)'}`);
 });
 
 config.command('set').description('Interactively set apiKey + apiSecret').action(async () => {
